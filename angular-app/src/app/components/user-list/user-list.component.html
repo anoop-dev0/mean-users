@@ -1,0 +1,23 @@
+<a mat-raised-button href="/register">Add User</a>
+<table id="users">
+    <tr>
+        <th>Image</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>Email</th>
+        <th>Contact</th>
+    </tr>
+    <tr *ngFor="let user of userList">
+        
+        <td><img [src]="getImage(user.image)" height="100px" width="100px"></td>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phoneNumber}}</td>
+        <td><button mat-raised-button (click)="edit(user)">Edit</button></td>
+        <td><button mat-raised-button (click)="delete(user)">Delete </button></td>
+        <td><button mat-button (click)="openDialog(user)">Open dialog</button></td>
+</tr>
+</table>

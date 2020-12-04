@@ -1,0 +1,24 @@
+<mat-form-field appearance="fill">
+
+    <div class="myfilebrowser">
+
+      <mat-toolbar>
+
+        <!-- Readonly Input to show File names -->
+        <input matInput [(ngModel)]="imageName" readonly name="memberContactNo" />
+
+        <!-- Browse Button -->
+        <button mat-flat-button color="primary">
+          Browse
+        </button>
+
+      </mat-toolbar>
+
+      <!-- Fetch selected filed on change -->
+      
+      <input type="file" #UploadFileInput id="fileUpload" (change)="fileChangeEvent($event)" name="fileUpload"
+        multiple="multiple" accept="image/*" />
+
+    </div>
+
+</mat-form-field>
